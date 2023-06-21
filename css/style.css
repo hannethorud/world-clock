@@ -1,6 +1,6 @@
 body {
-  background-color: #f9f7fe;
-  font-family: sans-serif;
+  background: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
+  font-family: "Montserrat", sans-serif;
 }
 
 h1 {
