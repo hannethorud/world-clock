@@ -1,5 +1,4 @@
 function updateTime() {
-  // Los Angeles
   let losAngelesElement = document.querySelector("#los-angeles");
   if (losAngelesElement) {
     let losAngelesDateElement = losAngelesElement.querySelector(".date");
@@ -12,7 +11,6 @@ function updateTime() {
     );
   }
 
-  // Paris
   let parisElement = document.querySelector("#paris");
   if (parisElement) {
     let parisDateElement = parisElement.querySelector(".date");
@@ -23,6 +21,16 @@ function updateTime() {
     parisTimeElement.innerHTML = parisTime.format(
       "h:mm:ss [<small>]A[</small>]"
     );
+  }
+
+  let osloElement = document.querySelector("#oslo");
+  if (osloElement) {
+    let osloDateElement = osloElement.querySelector(".date");
+    let osloTimeElement = osloElement.querySelector(".time");
+    let osloTime = moment().tz("Europe/Oslo");
+
+    osloDateElement.innerHTML = osloTime.format("MMMM	Do YYYY");
+    osloTimeElement.innerHTML = osloTime.format("h:mm:ss [<small>]A[</small>]");
   }
 }
 
@@ -44,7 +52,7 @@ function updateCity(event) {
     "A"
   )}</small></div>
   </div>
-  <a href="/">All cities</a>
+
   `;
 }
 
